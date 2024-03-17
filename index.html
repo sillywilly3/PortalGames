@@ -7,64 +7,7 @@
     <link rel="icon" href="https://www.pngkit.com/png/full/7-77247_portal-logo-png-transparent-portal-2-blue-portal.png" type="image/x-icon">
     <title>Portal Games</title>
     <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(28, 36, 53);
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
-        }
-        header {
-            background-color: rgb(49, 49, 49);
-            color: aliceblue;
-            height: min-content;
-            width: 100%;
-            padding: 0;
-            box-sizing: border-box;
-            z-index: 99999;
-        }
-        header h2 {
-            cursor: pointer;
-            font-size: 35px;
-            margin-left: 20px;
-        }
-        header img {
-            width: 19px;
-            height: 23px;
-        }
-        ::-webkit-scrollbar {
-            width: 15px;
-        }
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.055);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(91, 19, 158, 0.726);
-            border-radius: 50px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgb(68, 13, 121);
-            border-radius: 20px;
-        }
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 20px;
-            max-width: 1200px;
-        }
-        .game {
-            background-color: rgb(180, 180, 180);
-            border-radius: 30px;
-            width: 150px;
-            height: 175px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            left: 0;
-        }
+        /* Your CSS styles */
     </style>
 </head>
 <body>
@@ -77,15 +20,20 @@
         <!-- Add more divs with IDs and names as needed -->
     </main>
     <script>
-        var games = document.querySelectorAll('.game');
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Redirect to device-not-supported.html if user is on a mobile device
+            window.location.href = "/device-not-supported.html";
+        } else {
+            var games = document.querySelectorAll('.game');
 
-        games.forEach(function(game) {
-            game.addEventListener('click', function() {
-                var id = this.id;
-                var url = id + '.html';
-                window.location.href = url;
+            games.forEach(function(game) {
+                game.addEventListener('click', function() {
+                    var id = this.id;
+                    var url = id + '.html';
+                    window.location.href = url;
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
