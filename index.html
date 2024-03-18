@@ -90,16 +90,20 @@
         <div class="game" id="driver"><b>Russian Driver</b><br><span>Ze Russianz!</span><br><img src="https://i.ytimg.com/vi/BnSyEq31fvY/maxresdefault.jpg" alt="Drive_Img"></div>
     </main>
     <script>
-        var games = document.querySelectorAll('.game');
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Redirect to device-not-supported.html if user is on a mobile device
+            window.location.href = "/device-not-supported.html";
+        } else {
+            var games = document.querySelectorAll('.game');
 
-        games.forEach(function(game) {
-            game.addEventListener('click', function() {
-                this.classList.toggle('selected');
-                var id = this.id;
-                var url = id + '.html';
-                window.location.href = url;
+            games.forEach(function(game) {
+                game.addEventListener('click', function() {
+                    var id = this.id;
+                    var url = id + '.html';
+                    window.location.href = url;
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
