@@ -65,7 +65,30 @@
             align-items: flex-start;
             cursor: pointer;
             padding: 15px; 
+            transition: 1s ease 0.3s;
         }
+
+        @keyframes gameMove {
+            0% {
+                width: 175px;
+                height: 175px;
+            }
+            50% {
+                width: 183px;
+                height: 183px;
+            }
+
+            100% {
+                width: 175px;
+                height: 175px;
+            }
+        }
+
+        .game:hover {
+            animation: gameMove infinite ease 2.7s;
+            background-color: rgb(105, 136, 185);
+        }
+
 
         .game img {
             width: 100px;
@@ -103,6 +126,11 @@
                 });
             });
         }
+        const header = document.querySelector("header");
+        header.addEventListener('click', function() {
+            window.location = "https://portalgames.org";
+        });
     </script>
+    <script src="cloak.js"></script>
 </body>
 </html>
