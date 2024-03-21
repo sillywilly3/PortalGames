@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 29, 49);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header {
+    background-color: rgb(9, 14, 41);
+    color: aliceblue;
+    height: min-content;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header h2 {
+    cursor: pointer;
+    font-size: 35px;
+    margin-left: 20px;
+}
+.portal_Img1 {
+    width: 19px;
+    height: 23px;
+}
+.portal_Img2 {
+    width: 30px;
+    height: 34px;
+}
+main {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+.buttons {
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(149, 163, 185);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+.buttons:hover {
+    background-color: rgb(85, 105, 138);
+    margin-bottom: 1px;
+}
+.welcome {
+    position: fixed;
+    cursor: pointer;
+    font-size: 50px;
+    display: flex;
+    color: aliceblue;
+    top: 35%;
+    right: 30%;
+}
+.trademark {
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+    margin-left: 5px;
+}
