@@ -6,84 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <link rel="icon" href="https://www.pngkit.com/png/full/7-77247_portal-logo-png-transparent-portal-2-blue-portal.png" type="image/x-icon">
     <title>Portal Games</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(20, 29, 49);
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        header {
-            background-color: rgb(9, 14, 41);
-            color: aliceblue;
-            height: min-content;
-            width: 100%;
-            padding: 0;
-            box-sizing: border-box;
-            z-index: 99999;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        header h2 {
-            cursor: pointer;
-            font-size: 35px;
-            margin-left: 20px;
-        }
-        .portal_Img1 {
-            width: 19px;
-            height: 23px;
-        }
-        .portal_Img2 {
-            width: 30px;
-            height: 34px;
-        }
-        main {
-            display: flex;
-            gap: 15px;
-            padding: 20px;
-            max-width: 100%;
-            margin-top: 20px;
-        }
-        .buttons {
-            height: 50px;
-            padding: 10px 20px;
-            font-size: 20px;
-            border-radius: 10px;
-            background-color: rgb(149, 163, 185);
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.7s ease;
-        }
-        .buttons:hover {
-            background-color: rgb(85, 105, 138);
-            margin-bottom: 1px;
-        }
-        .welcome {
-            position: fixed;
-            cursor: pointer;
-            font-size: 50px;
-            display: flex;
-            color: aliceblue;
-            top: 35%;
-            right: 30%;
-        }
-        .trademark {
-            font-size: 10px;
-            position: relative;
-            top: -10px;
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <header>
@@ -94,31 +17,9 @@
         <br>
         <button class="buttons" id="gamesButton" onclick="gotoGames()"><b>Games</b></button>
         <button class="buttons" id="blankButton" onclick="openInBlank()"><b>Open in about:blank</b></button>
-        <button class="buttons" id="cloakButton" onclick="cloak()"><b>Cloak Tab</b></button>
+        <button class="buttons" id="cloakButton" onclick="toggleCloak()"><b id="cloakText">Cloak Tab</b></button>
     </main>
-    <script>
-        function gotoGames() {
-            gamesUrl = "/games.html"
-            window.location.href = gamesUrl
-        }
-
-        function openInBlank() {
-            alert('Coming Soon...')
-        }
-
-        function cloak() {
-            function gcloak() {
-                var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-                link.type = 'image/x-icon';
-                link.rel = 'shortcut icon';
-                link.href = 'https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico';
-                document.title = 'My Drive - Google Drive';
-                console.log(document.title);
-                document.getElementsByTagName('head')[0].appendChild(link);
-            }
-
-            setInterval(gcloak, 100);
-        }
-    </script>
+    <script src="home.js"></script>
+    <script src="cloak.js"></script>
 </body>
 </html>
