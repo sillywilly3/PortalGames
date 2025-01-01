@@ -4,7 +4,7 @@ function gotoGames() {
 }
 
 function openInBlank() {
-    alert('Coming Soon...')
+    window.location.href = "http://chat.portalgames.org"
 }
 function toggleCloak() {
     var isCloaked = localStorage.getItem('cloak') === 'true';
