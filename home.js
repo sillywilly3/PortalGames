@@ -3,7 +3,7 @@ function gotoGames() {
     window.location.href = gamesUrl
 }
 
-function openInBlank() {
+function gotoai() {
     window.location.href = "http://chat.portalgames.org"
 }
 function toggleCloak() {
