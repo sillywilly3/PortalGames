@@ -4,6 +4,7 @@ function gotoGames() {
 }
 
 function gotoai() {
+    console.log("AI button clicked!");  // Debugging
     window.open("http://api.portalgames.org", "_blank");
 }
 function toggleCloak() {
