@@ -4,7 +4,7 @@ function gotoGames() {
 }
 
 function gotoai() {
-    window.open("http://api.portalgames.org", "_blank");
+    window.open("http://chat.portalgames.org", "_blank");
 }
 function toggleCloak() {
     var isCloaked = localStorage.getItem('cloak') === 'true';
