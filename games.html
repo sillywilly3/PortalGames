@@ -123,7 +123,7 @@
             games.forEach(function(game) {
                 game.addEventListener('click', function() {
                     var id = this.id;
-                    var url = id + '.html';
+                    var url = '/games/' + id + '.html';
                     window.location.href = url;
                 });
             });
