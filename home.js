@@ -4,7 +4,7 @@ function gotoGames() {
 }
 
 function gotoai() {
-    window.open("http://chat.portalgames.org", "_blank");
+    window.open("https://beanz.dev", "_blank");
 }
 function toggleCloak() {
     var isCloaked = localStorage.getItem('cloak') === 'true';
