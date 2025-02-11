@@ -1,5 +1,5 @@
 function gotoGames() {
-    gamesUrl = "/games.html"
+    gamesUrl = "/games"
     window.location.href = gamesUrl
 }
 
