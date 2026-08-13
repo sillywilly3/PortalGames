@@ -1,0 +1,37 @@
+{
+  "name": "Portal Games",
+  "short_name": "Portal",
+  "description": "A hand-built arcade of free browser games. No ads, no sign-ups, no trackers, and nothing loaded from another server — so it works even on locked-down networks.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#141d31",
+  "theme_color": "#090e29",
+  "icons": [
+    {
+      "src": "/assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Slope",
+      "url": "/games/slope.html"
+    },
+    {
+      "name": "Stacks",
+      "url": "/games/stacks.html"
+    },
+    {
+      "name": "2048",
+      "url": "/games/2048.html"
+    },
+    {
+      "name": "Neon Snake",
+      "url": "/games/snake.html"
+    }
+  ]
+}
